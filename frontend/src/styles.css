@@ -18,11 +18,11 @@ body {
       "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   }
 
-header img {
-    width: 100% !important;
-  }
+section.even {
+  background-color: white;
+}
 
-section.odd {
+  section.odd {
     background-color:lightsteelblue;
   }
 
@@ -31,47 +31,6 @@ section {
     padding-bottom: 2em;
     padding-left: 1em;
     padding-right: 1em;
-  }
-
-section#acerca-de,
-  section#educacion {
-    display: inline-flex;
-  }
-
-section#acerca-de div,
-  section#educacion div {
-    padding-left: 1em;
-    padding-right: 1em;
-  }
-
-section div.left-75 {
-      float: left;
-      width: 75%;
-  }
-
-section div.right-25 {
-      float: right;
-      width: 25%;
-  }
-
-section div.left-25 {
-    float: left;
-    width: 25%;
-  }
-
-section div.right-75 {
-    float: right;
-    width: 75%;
-  }
-
-section#acerca-de img,
-  section#educacion img {
-      width: 100%;
-  
-  }
-
-section#educacion {
-      clear: both;
   }
 
 footer {
