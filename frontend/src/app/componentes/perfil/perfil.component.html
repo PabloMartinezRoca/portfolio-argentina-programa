@@ -1,6 +1,5 @@
 <section>
-    <h1>Pablo <strong>Martínez Roca</strong></h1>
-    <p>Licenciado en <strong>Multimedia</strong></p>
-    <p>Profesor de Informática y TIC</p>
-    <p>Emprendedor</p>
+    <h1>{{perfil.nombre}} <strong>{{perfil.apellido}}</strong></h1>
+    <p>{{perfil.fechaNacimiento}}</p>
+    <p *ngFor="let titulo of perfil.titulosAcademicos">{{titulo.nombre}}</p>
   </section>
