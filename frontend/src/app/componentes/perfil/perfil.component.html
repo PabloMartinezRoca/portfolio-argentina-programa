@@ -1,5 +1,64 @@
 <section>
-    <h1>{{perfil.nombre}} <strong>{{perfil.apellido}}</strong></h1>
-    <p>{{perfil.fechaNacimiento}}</p>
-    <p *ngFor="let titulo of perfil.titulosAcademicos">{{titulo.nombre}}</p>
-  </section>
+  <h1>{{perfil.nombre}} <strong>{{perfil.apellido}}</strong></h1>
+  <p>{{perfil.fechaNacimiento}}</p>
+  <p *ngFor="let titulo of perfil.titulosAcademicos">{{titulo.nombre}}</p>
+  <button *ngIf="usuarioAutenticado" class="btn btn-primary" data-bs-toggle="modal"
+    data-bs-target="#modalPerfil">Editar</button>
+</section>
+
+<!-- Modal -->
+<div class="modal fade" id="modalPerfil" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Editar Perfil</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <form [formGroup]="form">
+          <div class="mb-3">
+            <label for="nombre" class="form-label">Nombre</label>
+            <input type="text" class="form-control" id="nombre" formControlName="nombre">
+            <div *ngIf="nombre?.invalid && (nombre?.dirty || nombre?.touched)">
+              <div *ngIf="nombre?.errors?.['required']" class="text-danger">
+                El Nombre es obligatorio.
+              </div>
+            </div>
+            <label for="apellido" class="form-label">Apellido</label>
+            <input type="text" class="form-control" id="apellido" formControlName="apellido">
+            <div *ngIf="apellido?.invalid && (apellido?.dirty || apellido?.touched)">
+              <div *ngIf="apellido?.errors?.['required']" class="text-danger">
+                El Apellido es obligatorio.
+              </div>
+            </div>
+            <label for="contactoEmail" class="form-label">Email de contacto</label>
+            <input type="text" class="form-control" id="contactoEmail" formControlName="contactoEmail">
+            <div *ngIf="contactoEmail?.invalid && (contactoEmail?.dirty || contactoEmail?.touched)">
+              <div *ngIf="contactoEmail?.errors?.['required']" class="text-danger">
+                El Email es obligatorio.
+              </div>
+              <div *ngIf="contactoEmail?.errors?.['email']" class="text-danger">
+                El formato del Email no es válido.
+              </div>
+            </div>
+            <label for="url" class="form-label">Imagen de perfil</label>
+            <input type="text" class="form-control" id="url" formControlName="url">
+            <div *ngIf="url?.invalid && (url?.dirty || url?.touched)">
+              <div *ngIf="url?.errors?.['required']" class="text-danger">
+                El e-mail es obligatorio.
+              </div>
+              <div *ngIf="url?.errors?.['pattern']" class="text-danger">
+                El formato de la url no es válida.
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Salir</button>
+        <button type="button" class="btn btn-primary" (click)="guardarPerfil()">Guardar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
