@@ -10,6 +10,7 @@ import { AcercaDeComponent } from './componentes/acerca-de/acerca-de.component';
 import { EducacionComponent } from './componentes/educacion/educacion.component';
 import { PortfolioComponent } from './componentes/portfolio/portfolio.component';
 import { PieDePaginaComponent } from './componentes/pie-de-pagina/pie-de-pagina.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { PieDePaginaComponent } from './componentes/pie-de-pagina/pie-de-pagina.
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
