@@ -1,0 +1,19 @@
+{
+  "persona": {
+    "nombre": "Pablo",
+    "apellido": "Martínez Roca",
+    "fechaNacimiento": "10/11/1978",
+    "contactoEmail": "pablo.martinezroca@d-mice.com",
+    "titulosAcademicos": [
+      {
+        "nombre": "Licenciado en Multimedia"
+      },
+      {
+        "nombre": "Profesor de Informática y TIC"
+      },
+      {
+        "nombre": "Emprendedor"
+      }
+    ]
+  }
+}

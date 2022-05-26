@@ -1,0 +1,61 @@
+{
+  "educacion": {
+    "tipo": [
+      {
+        "nombre": "Educación Principal",
+        "estudiosCursados": [
+          {
+            "escuela": "Escuala Técnica Philips Argentina",
+            "titulo": "Técnico Electrónico",
+            "img": "./assets/imagenes/logos-educacion/lg-escuela-philips.png",
+            "carrera": "Electrónica",
+            "promedio": "7.12",
+            "fechaInicio": "1991",
+            "fechaFin": "1997"
+          },
+          {
+            "escuela": "Universidad Maimónides",
+            "titulo": "Licenciado en Multimedia",
+            "img": "./assets/imagenes/logos-educacion/lg-umai.png",
+            "carrera": "Licenciatura en Tecnologías Multimediales",
+            "promedio": "7.98",
+            "fechaInicio": "1992",
+            "fechaFin": "2022"
+          }
+        ]
+      },
+      {
+        "nombre": "Educación Secundaria",
+        "estudiosCursados": [
+          {
+            "escuela": "Gobierno de la Ciudad de Buenos Aires",
+            "titulo": "",
+            "img": "",
+            "carrera": "",
+            "promedio": "",
+            "fechaInicio": "",
+            "fechaFin": ""
+          },
+          {
+            "escuela": "Argentina Programa",
+            "titulo": "",
+            "img": "",
+            "carrera": "",
+            "promedio": "",
+            "fechaInicio": "",
+            "fechaFin": ""
+          },
+          {
+            "escuela": "UTN",
+            "titulo": "",
+            "img": "",
+            "carrera": "",
+            "promedio": "",
+            "fechaInicio": "",
+            "fechaFin": ""
+          }
+        ]
+      }
+    ]
+  }
+}
