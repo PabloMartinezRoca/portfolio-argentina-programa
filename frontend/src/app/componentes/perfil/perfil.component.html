@@ -45,7 +45,7 @@
             <input type="text" class="form-control" id="url" formControlName="url">
             <div *ngIf="url?.invalid && (url?.dirty || url?.touched)">
               <div *ngIf="url?.errors?.['required']" class="text-danger">
-                El e-mail es obligatorio.
+                La url de la imagen de perfil es obligatoria.
               </div>
               <div *ngIf="url?.errors?.['pattern']" class="text-danger">
                 El formato de la url no es válida.

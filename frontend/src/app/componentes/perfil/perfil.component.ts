@@ -5,7 +5,7 @@ import { DatosPerfilService } from 'src/app/servicios/datos-perfil.service';
 @Component({
   selector: 'app-perfil',
   templateUrl: './perfil.component.html',
-  styleUrls: ['./perfil.component.css'],
+  styleUrls: ['./perfil.component.css', '../../estilos-compartidos/forms.css'],
 })
 export class PerfilComponent implements OnInit {
   perfil: any = {};
@@ -58,7 +58,8 @@ export class PerfilComponent implements OnInit {
     else
     {
       this.form.markAllAsTouched();
-      alert("Hay campos no válidos");
     }
   }
 }
+
+
