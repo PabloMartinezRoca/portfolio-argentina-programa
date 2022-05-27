@@ -2,8 +2,8 @@
   <h1>{{perfil.nombre}} <strong>{{perfil.apellido}}</strong></h1>
   <p>{{perfil.fechaNacimiento}}</p>
   <p *ngFor="let titulo of perfil.titulosAcademicos">{{titulo.nombre}}</p>
-  <button *ngIf="usuarioAutenticado" class="btn btn-primary" data-bs-toggle="modal"
-    data-bs-target="#modalPerfil">Editar</button>
+  <button *ngIf="usuarioAutenticado" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalPerfil"
+    (click)="cargarDatosActualesAlFormulario()">Editar</button>
 </section>
 
 <!-- Modal -->
@@ -31,6 +31,16 @@
                 El Apellido es obligatorio.
               </div>
             </div>
+            <label for="fechaNacimiento" class="form-label">Fecha de nacimiento</label>
+            <input type="text" class="form-control" id="fechaNacimiento" formControlName="fechaNacimiento">
+            <div *ngIf="fechaNacimiento?.invalid && (fechaNacimiento?.dirty || fechaNacimiento?.touched)">
+              <div *ngIf="fechaNacimiento?.errors?.['required']" class="text-danger">
+                La fecha de nacimiento es obligatoria.
+              </div>
+              <div *ngIf="fechaNacimiento?.errors?.['pattern']" class="text-danger">
+                El formato de la fecha de nacimiento no es válido.
+              </div>
+            </div>
             <label for="contactoEmail" class="form-label">Email de contacto</label>
             <input type="text" class="form-control" id="contactoEmail" formControlName="contactoEmail">
             <div *ngIf="contactoEmail?.invalid && (contactoEmail?.dirty || contactoEmail?.touched)">
@@ -55,10 +65,10 @@
         </form>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Salir</button>
+        <button type="button" id="btnCerrarModalFormPerfil" class="btn btn-secondary"
+          data-bs-dismiss="modal" (click)="resetForm()">Salir</button>
         <button type="button" class="btn btn-primary" (click)="guardarPerfil()">Guardar</button>
       </div>
     </div>
   </div>
 </div>
-
