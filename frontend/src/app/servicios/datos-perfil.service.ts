@@ -13,8 +13,8 @@ export class DatosPerfilService {
     // Carga datos desde un JSON estático
     // return this.http.get('./assets/data/perfil.json');
 
-    // Carga datos desde un JSON Server
-    return this.http.get('http://localhost:3000/db');
+    // Carga datos desde un JSON Server ==> registro 1
+    return this.http.get('http://localhost:3000/perfil');
   }
 
   guardarDatos(perfil:Perfil): Observable<any> {

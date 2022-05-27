@@ -22,8 +22,8 @@ export class PerfilComponent implements OnInit {
 
   ngOnInit(): void {
     this.datosPerfil.cargarDatos().subscribe((data) => {
-      this.perfil = data["perfil"];
-      console.log(this.perfil.nombre);
+      this.perfil = data;
+      console.log(this.perfil);
     });
 
     this.form = this.formBuilder.group({
@@ -57,7 +57,7 @@ export class PerfilComponent implements OnInit {
         },
         (error) => {
           alert(
-            'Ha ocurrido un error al actualizar los datos. Por favor, reintente.<br />Si el problema persiste, contacte al administrador.'
+            'Ha ocurrido un error al actualizar los datos. Por favor, reintente. Si el problema persiste, contacte al administrador.'
           );
         }
       );
