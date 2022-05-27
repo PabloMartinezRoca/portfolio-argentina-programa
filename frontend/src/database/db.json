@@ -1,0 +1,20 @@
+{
+  "perfil": {
+    "nombre": "Pablo Andrés",
+    "apellido": "Martínez Roca",
+    "fechaNacimiento": "10/11/1978",
+    "contactoEmail": "pablo.martinezroca@d-mice.com",
+    "url": "http://nueva imagen",
+    "titulosAcademicos": [
+      {
+        "nombre": "Licenciado en Multimedia"
+      },
+      {
+        "nombre": "Profesor de Informática y TIC"
+      },
+      {
+        "nombre": "Emprendedor"
+      }
+    ]
+  }
+}
